@@ -13,7 +13,9 @@ fi
 
 # 1. Install the Lightly theme system
 printf "${YELLOW}Installing Lightly theme system...${NC}\n"
-
+dnf install -y git cmake extra-cmake-modules "cmake(KDecoration2)" kwin-devel \
+    kf6-kcolorscheme-devel kf6-kguiaddons-devel kf6-ki18n-devel kf6-kiconthemes-devel \
+    kf6-kirigami-devel kf6-kcmutils-devel kf6-frameworkintegration-devel
 # Check if the Lightly directory exists
 if [ -d "Lightly" ]; then
   printf "${YELLOW}The Lightly directory already exists. Continue with installation? If yes, the Lightly directory will be deleted. (yes/no): ${NC}"
